@@ -17,7 +17,7 @@ Welcome to the **HTML & CSS Live Coding Challenge**! 🚀 In this session, we wo
   - Hover effect on the button
   - Smooth CSS transitions
 
-## 📂 Folder Contents (/HTML&CSSLiveCodingChallenge/)
+## 📂 Folder Contents (`/HTML&CSSLiveCodingChallenge/`)
 
 This folder contains the essential files from the live coding session:
 
