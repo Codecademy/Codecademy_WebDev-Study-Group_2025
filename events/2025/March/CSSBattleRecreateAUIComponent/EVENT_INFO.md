@@ -1,6 +1,8 @@
 # CSS Battle – Recreate a UI Component! 🎨🔥
 
-Welcome to the **CSS Battle - Recreate a UI Component! 🚀 This session was designed to challenge your CSS skills by recreating a UI component from scratch. It's a great way to refine your front-end abilities, improve attention to detail, and practice writing clean and efficient CSS!
+## 📢 Event Overview
+
+Welcome to the **CSS Battle - Recreate a UI Component!** 🚀 This session was designed to challenge your CSS skills by recreating a UI component from scratch. It's a great way to refine your front-end abilities, improve attention to detail, and practice writing clean and efficient CSS!
 
 ## 📌 Challenge Details
 
