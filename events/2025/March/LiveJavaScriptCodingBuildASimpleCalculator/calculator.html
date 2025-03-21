@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Calculator</title>
+        <style>
+            body {
+                background-color: lightslategray;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .calculator {
+                width: 250px;
+                background-color: #222;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                margin: auto;
+                margin-top: 50px;
+            }
+            #display {
+                width: 100%;
+                height: 50px;
+                font-size: 2em;
+                text-align: right;
+                margin-bottom: 10px;
+                border: none;
+                background-color: #fff;
+                padding: 5px;
+            }
+            .buttons button {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5em;
+                margin: 5px;
+                cursor: pointer;
+                background-color: #444;
+                color: white;
+                border-radius: 5px;
+                transition: transform 0.1s ease;
+            }
+            #clear {
+                background-color: #d9534f;
+            }
+            #backspace {
+                background-color: #5bc0de;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+            <div class="buttons">
+                <button>7</button><button>8</button><button>9</button><button>/</button>
+                <button>4</button><button>5</button><button>6</button><button>*</button>
+                <button>1</button><button>2</button><button>3</button><button>-</button>
+                <button>0</button><button>.</button><button>=</button><button>+</button>
+                <button id="clear">C</button><button id="backspace">⌫</button>
+            </div>
+        </div>
+        <script>
+            const display = document.getElementById("display");
+            const buttons = document.querySelectorAll("button");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const buttonText = button.textContent;
+                    const lastChar = display.value.slice(-1);
+
+                    //clear error message if present
+                    if (display.value === 'Error') {
+                        display.value = '';
+                    }
+                    
+                    // Handling the equals button
+                    if (buttonText === "=") {
+                        try {
+                            if (display.value === "" || /[^0-9+\-*/.]/.test(display.value)) {
+                                display.value = "Error"; //Prevent empty or invalid input
+                                return;
+                            }
+                            if (display.value.includes("/0")) {
+                                display.value = "Cannot divide by 0";
+                                // Prevent division by 0
+                                    return;
+                            }
+                            display.value = eval(display.value);
+                        } catch {
+                            display.value = "Error"; // General error handling
+                        }
+                    }
+                    // Handling the clear button
+                    else if (buttonText === "C") {
+                        display.value = ''; // Clearing the display
+                    }
+                    // Handling the backspace button
+                    else if (buttonText === "⌫") {
+                        display.value = display.value.slice(0, -1); // Removing the last character
+                    }
+                    // Prevent multiple decimals and consecutive operators
+                    else {
+                        if (buttonText === "." && display.value.includes(".")) return;
+                        if (["+", "-", "*", "/"].includes(buttonText) && ["+", "-", "*", "/"].includes(lastChar)) return;
+                        display.value += buttonText;
+                    }
+                });
+            });
+            // Button click animation
+            buttons.forEach(button => {
+                button.addEventListener("mousedown", () => {
+                    button.style.transform = "scale(0.9)"; // Button presses in
+                });
+                button.addEventListener("mouseup", () => {
+                    button.style.transform = "scale(1)"; // Button releases out
+                });
+            });
+        </script>
+    </body>
+</html>
