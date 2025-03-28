@@ -16,8 +16,7 @@ A collection of guides and walkthroughs to help you master front-end concepts.
 
 ### Available Tutorials
 
-- [Title 1](./tutorials/title1.md) - Brief description of the tutorial.
-- [Title 2](./tutorials/title2.md) - Brief description of the tutorial.
+- [Basic HTML/CSS Website Structure Template](https://github.com/Codecademy/Codecademy_WebDev-Study-Group_2025/blob/main/resources/tutorials/Basic_HTML%26CSS_Website_Structure_Template.md) - A concise, structured reference guide for creating a basic HTML and CSS website from scratch, complete with foundational templates, best practices, and helpful tips for translating wireframes or design specs into effective web pages. _(Created and added by: Dani T.)_
 
 ## Tools
 
