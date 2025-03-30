@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Product Page</title>
+
+        <style>
+            /*CSS code goes here*/
+
+            * {
+                /* applies to all elements */
+                /* reset any presets on document */
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                height: 100vh; /* keeps height flexible */
+
+            }
+
+            #product_card {
+                border: 3px solid white; /* creats a border */
+                border-radius: 10%; /* makes the border round */
+                background-color: #1f1e1e;
+                text-align: center;
+                width: fit-content; /* makes the width of the container adjust to the content */
+                height: fit-content;
+                padding: 20px;
+                box-shadow: 10px 30px 40px rgba(215, 197, 220, 0.39);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            #product_card:hover {
+                transform: translateY(-5px);
+            }
+
+            #product_card img { 
+                overflow: hidden; /* keeps content within div dimensions */
+                max-width: 60%; /* resizes the content without cropping it */
+            }
+
+            #product_price {
+                color: darkolivegreen;
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+            #product_card button {
+                background-color: darkcyan;
+                color: darkred;
+                font-size: 1.5rem; /* makes font adjustable */
+                font-weight: bold;
+                border-radius: 10px;
+                border: 2px solid white;
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            #product_card button:hover {
+                background-color: lightblue;
+                border: 2px solid black;
+                cursor: pointer;
+            }
+
+            #product_info {
+                padding: 20px;
+            }
+
+            #product_info h2 {
+                font-size: 2.0rem;
+            }
+
+            #product_description {
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--HTML code goes here-->
+        
+        <header></header>
+
+        <div id="product_card">
+            <img src="./lotion.png" alt="luxurious lotion">
+            <div id="product_info">
+                <h2>Luxurious Lotion</h2>
+                <p id="product_description">Don't miss out! Applying this lotion will make you feel like a million bucks!!</p>
+                <p id="product_price">$9.99</p>
+                <button>Buy Now!!</button>
+            </div>
+        </div>
+        <script>
+            // Javascript code goes here
+        </script>
+
+        <footer></footer>
+
+    </body>
+</html>
