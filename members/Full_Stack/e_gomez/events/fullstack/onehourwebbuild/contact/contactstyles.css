@@ -1,0 +1,98 @@
+/* CSS code for contactme.html */
+
+/* had some assistance from ChatGPT in order to align certain elements */
+
+/* remove any presets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    background-image: url("image3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centering all children in main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+}
+
+/* Navigation bar */
+#navigation {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(19, 18, 18, 0.7);
+    padding: 10px;
+    width: 100vw;
+    justify-content: center;
+}
+
+#navigation a {
+    color: grey;
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 0 20px;
+}
+
+/* Title section */
+#title {
+    background-color: rgba(19, 18, 18, 0.7);
+    padding: 20px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+/* Contact form section */
+#contact_form {
+    font-size: 1rem;
+    background-color: rgba(19, 18, 18, 0.7);
+    width: fit-content;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Paragraph section */
+#paragraphs {
+    width: fit-content;
+    padding: 10px;
+    background-color: rgba(19, 18, 18, 0.7);
+    margin: 30px auto;
+}
+
+#paragraphs p {
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: rgba(19, 18, 18, 0.7);
+    width: 100%;
+}
