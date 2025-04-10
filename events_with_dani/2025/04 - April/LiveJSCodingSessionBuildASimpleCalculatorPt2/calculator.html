@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Calculator</title>
+        <style>
+            /* Container for the calculator */
+            .calculator {
+                width: 250px;
+                background-color: #222;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                margin: auto;
+                margin-top: 50px;
+            }
+            /* Styling for the display input */
+            #display {
+                width: 100%;
+                height: 50px;
+                font-size: 2em;
+                text-align: right;
+                margin-bottom: 10px;
+                background-color: #fff;
+            }
+            /* Basic button styling */
+            .buttons button {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5em;
+                margin: 5px;
+                cursor: pointer;
+                border: none;
+                background-color: #444;
+                color: white;
+                border-radius: 5px;
+                transition: transform 0.1s ease;
+            }
+            /* Highlight every fourth button (operators) */
+            .buttons button:nth-child(4n) {
+                background-color: #ff9500;
+            }
+            /* Styling for Clear button */
+            #clear {
+                background-color: #d9534f;
+            }
+            /* Styling for Backspace button */
+            #backspace {
+                background-color: #5bc0de;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="calculator">
+            <!-- Read-only display for calculations -->
+            <input type="text" id="display" disabled>
+
+            <!-- Container for calculator buttons -->
+            <div class="buttons">
+                <!-- Number and operator buttons -->
+                <button>7</button><button>8</button><button>9</button><button>/</button>
+                <button>4</button><button>5</button><button>6</button><button>*</button>
+                <button>1</button><button>2</button><button>3</button><button>-</button>
+                <button>0</button><button>.</button><button>=</button><button>+</button>
+                <!-- Control buttons -->
+                <button id="clear">C</button><button id="backspace">⌫</button>
+            </div>
+        </div>
+
+        <script>
+            // Grab the input display element
+            const display = document.getElementById("display");
+
+            // Select all calculator buttons
+            const buttons = document.querySelectorAll("button");
+
+            // Add click events to each button
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const buttonText = button.textContent; // Text on the button
+                    const lastChar = display.value.slice(-1); // Last character in the display
+
+                    // When = is pressed
+                    if (buttonText === "=") {
+                        try {
+                            // Prevent empty or invalid input
+                            if (display.value === "" || /[^0-9+\-*/.]/.test(display.value)) {
+                                display.value = "Error";
+                                return;
+                            }
+                            
+                            //Prevent dividing by zero
+                            if (display.value.includes("/0")) {
+                                display.value = "Cannot divide by 0";
+                                return;
+                            }
+
+                            // Evaluate the expression
+                            display.value = eval(display.value);
+                        } catch {
+                            display.value = "Error"; // Handle syntax errors
+                        }
+                    }
+
+                    // Clear button
+                    else if (buttonText === "C") {
+                        display.value = ""; // Resets the display
+                    }
+
+                    // Backspace button
+                    else if (buttonText === "⌫") {
+                        display.value = display.value.slice(0, -1); // Removes the last character
+                    }
+                    // Prevent duplicate dots or consecutive operators
+                    else {
+                        if (buttonText === "." && display.value.includes(".")) return; // Prevent multiple dots
+                        if (["+", "-", "*", "/"].includes(buttonText) && ["+", "-", "*", "/"].includes(lastChar)) return; // Prevent consecutive operators
+
+                        // Append valid button text to display
+                        display.value += buttonText;
+                    }
+                });
+            });
+
+            // Allow keyboard interaction
+            document.addEventListener("keydown", (event) => {
+                const key = event.key; // Get the pressed key
+
+                // If key is a number or operator
+                if (!isNaN(key) || ["+", "-", "*", "/", "."].includes(key)) {
+                    display.value += key; // Append to display
+                }
+
+                // Enter key triggers evaluation
+                else if (key === "Enter") {
+                    try {
+                        if (display.value === "" || /[^0-9+\-*/.]/.test(display.value)) {
+                            display.value = "Error";
+                            return;
+                        }
+
+                        if (display.value.includes("/0")) {
+                            display.value = "Cannot divide by 0";
+                            return;
+                        }
+
+                        display.value = eval(display.value);
+                    } catch {
+                        display.value = "Error";
+                    }
+                }
+
+                // Backspace removes last character
+                else if (key === "Backspace") {
+                    display.value = display.value.slice(0, -1);
+                }
+
+                // Escape clears the display
+                else if (key === "Escape") {
+                    display.value = "";
+                }
+            });
+
+            // Visual press effect when clicking buttons
+            buttons.forEach(button => {
+                button.addEventListener("mousedown", () => {
+                    button.style.transform = "scale(0.9)";
+                });
+                button.addEventListener("mouseup", () => {
+                    button.style.transform = "scale(1)";
+                });
+            });
+
+        </script>
+    </body>
+</html>
