@@ -26,15 +26,15 @@ All participant projects are available in the `/submissions` folder of this dire
 - Optional GitHub Pages or CodePen link
 - Reflections and feedback requests
 
+## 📺 Resources
+
+You can revisit the slides, recording, and reference links here: [Google Drive Link](https://drive.google.com/drive/folders/1hfHGsSyZKGYCiitOP7pAQJrBvxFkm8fQ?usp=drive_link)
+
 ## 📎 Additional Resources
 
 - [CodePen](https://codepen.io/)
 - [CSS Tricks](https://css-tricks.com/)
 - [MDN Responsive Design Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [How to Make a Pull Request](https://www.makeapullrequest.com/)
-
-## 📺 Resources
-
-You can revisit the slides, recording, and reference links here: [Google Drive Link](https://drive.google.com/drive/folders/1hfHGsSyZKGYCiitOP7pAQJrBvxFkm8fQ?usp=drive_link)
 
 🚀 Happy Coding!
