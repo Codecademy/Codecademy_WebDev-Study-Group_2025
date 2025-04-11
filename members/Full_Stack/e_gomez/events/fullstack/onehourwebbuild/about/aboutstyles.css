@@ -1,0 +1,139 @@
+/* CSS code for aboutme.html page */
+
+/* Remove any default settings/parameters */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the HTML body element aka DOM document */
+html, body {
+    background-color: black; /* will show only if image doesn't display */
+    background-image: url("image2.jpg"); /* sets image to be used as page background */
+    background-repeat: no-repeat; /* prevents the image from repeating */
+    background-size: cover; /* spreads the image to cover the page body */
+    background-position: center; /* centers the background image*/
+    background-attachment: fixed; /* image will not scroll with page */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* fix recommended by chatgpt in order to center my divs */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+/* end chatgpt */
+
+
+/* Styling for the Navigation */
+#navigation {
+    display: flex;
+    flex-direction: row; /* sets each hyperlink element in one line/row */
+    justify-content: center; /* places navigation within the center */
+    width: 100%;
+    background-color: rgba(19, 18, 18, 0.7); /* sets black background with opacity */
+    padding: 10px
+}
+
+#navigation a {
+    color: white;
+    border: 2px solid white;
+    padding: 10px 30px;
+    color: grey;
+    margin: 0px 20px;
+}
+
+/* Styling for container */
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+
+#title {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(19, 18, 18, 0.7);
+    width: 100%;
+}
+
+/* Styling for text */
+#text {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(19, 18, 18, 0.7);
+    align-items: center;
+}
+
+#links a {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#content {
+    padding: 20px;
+    align-items: center;
+    background-color: rgba(19, 18, 18, 0.7);
+    margin-left: 20px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#content p {
+    text-align: left;
+    margin: 20px;
+}
+
+
+/* class that will hide html elements assigned to it */
+.hidden {
+    display: none; /* hides html element */
+}
+
+
+/* Styling for video */
+#video {
+    padding: 10px;
+    background-color: rgba(19, 18, 18, 0.7);
+}
+
+#video video {
+    width: fit-content;
+    height: fit-content;
+}
+/* -------end container---------- */
+
+footer {
+    background-color: rgba(19, 18, 18, 0.7);
+    padding: 10px; 
+}
+
+#container #title #text #content #video {
+    margin: auto;
+}

@@ -11,7 +11,7 @@ Develop a **basic task manager web application** where users can add, edit, dele
 
   - **HTML/CSS Developer (1-2 people)**: Creates the basic layout and applies styling for a clean UI.
   - **JavaScript Developer (1-2 people)**: Handles task management functionality.
-  - **Data Manager (1 person, optional): Manages local storage for task persistence.
+  - **Data Manager (1 person, optional)**: Manages local storage for task persistence.
 
 ## 🔧 Tools & Technologies
 

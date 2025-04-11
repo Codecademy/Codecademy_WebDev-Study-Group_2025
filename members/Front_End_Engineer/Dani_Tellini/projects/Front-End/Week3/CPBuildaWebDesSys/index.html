@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>My Design System</title>
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Add fonts from Google Fonts here -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Libre+Baskerville:wght@700&family=Merriweather:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>My Design System</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#fonts">Fonts</a></li>
+                    <li><a href="#text-styles">Text Styles</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="colors">
+                <h2>Colors</h2>
+                <!-- Colors will go here -->
+                <div class="swatch-container">
+                    <div id="color-swatch">
+                        <div id="color-box" style="background-color: #2e8b57"></div>
+                        <p>Forest Green</p>
+                        <p>Hex: #2E8B57</p>
+                        <p id="color-description"><strong>Usage:</strong> Backgrounds, headers, or accents to evoke a sense of tranquility and growth.</p>
+                    </div>
+                    <div id="color-swatch">
+                        <div id="color-box" style="background-color: #f5f5dc"></div>
+                        <p>Vintage Beige</p>
+                        <p>Hex: #F5F5DC</p>
+                        <p id="color-description"><strong>Usage:</strong> Main background color or for sections to give a warm, nostalgic feel.</p>
+                    </div>
+                    <div id="color-swatch">
+                        <div id="color-box" style="background-color: #704214"></div>
+                        <p>Sepia Brown</p>
+                        <p>Hex: #704214</p>
+                        <p id="color-description"><strong>Usage:</strong> Text color or borders to add depth and a classic touch.</p>
+                    </div>
+                    <div id="color-swatch">
+                        <div id="color-box" style="background-color: #d2691e"></div>
+                        <p>Rustic Orange</p>
+                        <p>Hex: #D2691E</p>
+                        <p id="color-description"><strong>Usage:</strong> Buttons or highlights to draw attention and add vibrancy.</p>
+                    </div>
+                    <div id="color-swatch">
+                        <div id="color-box" style="background-color: #008080"></div>
+                        <p>Deep Teal</p>
+                        <p>Hex: #008080</p>
+                        <p id="color-description"><strong>Usage:</strong> Links or hover effects to introduce a modern edge.</p>
+                    </div>
+                    <div id="color-swatch">
+                        <div id="color-box" style="background-color: #fffdd0"></div>
+                        <p>Creamy White</p>
+                        <p>Hex: #FFFDD0</p>
+                        <p id="color-description"><strong>Usage:</strong> Backgrounds or typography to ensure readability and comfort.</p>
+                    </div>
+                </div>
+            </section>
+            <div class="section-divider"></div>
+            <section id="fonts">
+                <h2>Fonts</h2>
+                <!-- Fonts will go here -->
+                <div class="font-container">
+                    <div class="font-sample" id="merriweather">
+                        <h3>Merriweather</h3>
+                        <p id="plain">The quick brown fox jumps over the lazy dog.</p>
+                        <p id="bold">The quick brown fox jumps over the lazy dog.</p>
+                        <p id="italic">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                    <div class="font-sample" id="libre-baskerville">
+                        <h3>Libre Baskerville</h3>
+                        <p id="plain">The quick brown fox jumps over the lazy dog.</p>
+                        <p id="bold">The quick brown fox jumps over the lazy dog.</p>
+                        <p id="italic">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                    <div class="font-sample" id="lato">
+                        <h3>Lato</h3>
+                        <p id="plain">The quick brown fox jumps over the lazy dog.</p>
+                        <p id="bold">The quick brown fox jumps over the lazy dog.</p>
+                        <p id="italic">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                    <div class="font-sample" id="open-sans">
+                        <h3>Open Sans</h3>
+                        <p id="plain">The quick brown fox jumps over the lazy dog.</p>
+                        <p id="bold">The quick brown fox jumps over the lazy dog.</p>
+                        <p id="italic">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                    <div class="font-sample" id="fira">
+                        <h3>Fira Code</h3>
+                        <p id="plain"><code>The quick brown fox jumps over the lazy dog.</code></p>
+                    </div>
+                    <div class="font-sample" id="source-code">
+                        <h3>Source Code Pro</h3>
+                        <p id="plain"><code id="source-code-pro">The quick brown fox jumps over the lazy dog.</code></p>
+                    </div>
+                </div>
+            </section>
+            <div class="section-divider"></div>
+            <section id="text-styles">
+                <h2>Text Styles</h2>
+                <!-- Text styles will go here -->
+                <div class="styles-container">
+                    <div class="text-style">
+                        <h3>Main Heading (h1)</h3>
+                        <h1>This is a Main Heading</h1>
+                        <p class="style-details">
+                            Styles: font-family: 'Merriweather', serif; font-size: 2.5em; font-weight: 700; color: var(--forest-green);
+                        </p>
+                    </div>
+                    <div class="text-style">
+                        <h3>Subheading (h2)</h3>
+                        <h2>This is a Subheading</h2>
+                        <p class="style-details">
+                            Styles: font-family: 'Merriweather', serif; font-size: 2em; font-weight: 400; color: var(--forest-green);
+                        </p>
+                    </div>
+                    <div class="text-style">
+                        <h3>Paragraph Text</h3>
+                        <p>This is a sample paragraph demonstrating the body text style. It should be easy to read and comfortable on the eyes.</p>
+                        <p class="style-details">
+                            Styles: font-family: 'Lato', sans-serif; font-size: 1em; line-height: 1.6; color: var(--sepia-brown);
+                        </p>
+                    </div>
+                    <div class="text-style">
+                        <h3>Link Text (a)</h3>
+                        <p>
+                            Visit the <a href="#">blog section</a> to read my latest posts.
+                        </p>
+                        <p class="style-details">
+                            Styles: color: var(--deep-teal); text-decoration: none; (hover: text-decoration: underline;)
+                        </p>
+                    </div>
+                    <div class="text-style">
+                        <h3>Button Text (.button)</h3>
+                        <button class="button">Click Here</button>
+                        <p class="style-details">
+                            Styles: background-color: var(--rustic-orange); color: var(--creamy-white); font-family: 'Lato', sans-serif; padding: 10px 20px; border-radius: 4px;
+                        </p>
+                    </div>
+                    <div class="text-style">
+                        <h3>Code Snippet (code)</h3>
+                        <p>Here is an example of inline code: <code>console.log('Hello, world!');</code></p>
+                        <p class="style-details">
+                            Styles: font-family: 'Fira Code', monospace; background-color: var(--creamy-white); color: var(--sepia-brown); padding: 2px 4px; border-radius: 4px;
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Dani Tellini</p>
+        </footer>
+    </body>   
+</html>

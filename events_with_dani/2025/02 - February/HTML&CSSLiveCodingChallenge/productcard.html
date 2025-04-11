@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Product Card</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f4f4f4;
+            }
+
+            .product-card {
+                background: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                width: 300px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .product-image {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .product-info {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .product-title {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .product-price {
+                color: #27ae60;
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+
+            .product-description {
+                font-size: 0.9rem;
+                color: #666;
+                margin-bottom: 15px;
+            }
+
+            .buy-button {
+                background: #27ae60;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .buy-button:hover {
+                background: #219150;
+            }
+
+            @media (max-width: 400px) {
+                .product-card {
+                    width: 90%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="product-card">
+            <img src="./stylish-headphones.png" alt="Stylish Headphones" class="product-image">
+            <div class="product-info">
+                <h2 class="product-title">Stylish Headphones</h2>
+                <p class="product-price">$99.99</p>
+                <p class="product-description">High-quality wireless headphones with noise cancellation and long battery life.</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+    </body>
+</html>

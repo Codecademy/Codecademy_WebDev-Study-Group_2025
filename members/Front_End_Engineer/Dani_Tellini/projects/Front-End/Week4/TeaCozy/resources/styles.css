@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    border-bottom: 1px solid seashell;
+    top: 0;
+    width: 100%;
+    height: 69px;
+    background-color: black;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo img {
+    display: flex;
+    height: 50px;
+}
+
+nav .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-list li a {
+    text-decoration: underline;
+    color: seashell;
+}
+
+nav .nav-list li a:hover {
+    text-decoration: none;
+}
+
+.header-spacer {
+    height: 69px;
+}
+
+/* Banner & Mission */
+
+.mission-banner {
+    background-image: url('./images/img-mission-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mission-banner h2 {
+    background-color: black;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mission-banner h4 {
+    background-color: black;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+/* Tea of the Month */
+
+.tea-of-the-month {
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.tea-of-the-month h2 {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.tea-of-the-month h4 {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.teas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tea-item {
+    padding: 10px 15px
+}
+
+.tea-item img {
+    width: 300px;
+    height: 200px;
+    padding-bottom: 10px;
+}
+
+/* Locations */
+
+.locations {
+    background-image: url('./images/img-locations-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1200px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.locations h2 {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.location-list {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.location {
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.location h3 {
+    padding: 25px 0;
+}
+
+.location p {
+    padding: 25px 0;
+}
+
+/* Footer */
+
+.contact {
+    height: 200px;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.contact h2 {
+    padding-bottom: 25px;
+}
+
+.contact h5 {
+    padding: 15px 0;
+}
+
+.copyright {
+    text-align: left;
+    padding-left: 20px;
+}

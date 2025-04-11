@@ -1,0 +1,150 @@
+/* CSS code for index.html page */
+
+/* clear any default settings/parameters */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 90vw; /* Ensures page width is equal to the browser window */
+    height: 100vh; /* Ensures page height fits the window */
+}
+
+/* NAVIGATION BAR */
+#navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centering navigation bar */
+    width: 100%; /* Ensure it spans full width of the page */
+    padding: 10px;
+}
+
+#navigation a {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid white;
+    border-width: auto;
+    padding: 10px 30px;
+    color: grey;
+    margin: 0px 20px;
+}
+
+/* container 1 */
+#container1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    max-width: 1000px;
+    padding: 20px;
+    aspect-ratio: 1 / 1;
+}
+
+#image1 {
+    width: fit-content;
+    height: fit-content;
+    padding-left: 20px;
+}
+
+#image1 img {
+    width: 100%;
+    max-width: 500px;
+    height: 80%;
+}
+
+#paragraph1 h2 {
+    font-size: 2.0rem;
+}
+
+#paragraph1 p {
+    font-size: 1rem;
+}
+
+/* container 2 */
+#container2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    max-width: 1000px;
+    padding: 20px;
+    aspect-ratio: 1 / 1;
+}
+
+#image2 {
+    width: fit-content;
+    height: fit-content;
+    padding-right: 20px;
+}
+
+#image2 img {
+    width: 100%;
+    max-width: 500px;
+    height: 80%;
+}
+
+#paragraph2 h2 {
+    font-size: 2.0rem;
+}
+
+#paragraph2 p {
+    font-size: 1rem;
+}
+
+/* container 3 */
+#container3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    max-width: 1000px;
+    padding: 20px;
+    aspect-ratio: 1 / 1;
+}
+
+#image3 {
+    width: fit-content;
+    height: fit-content;
+    padding-left: 20px;
+}
+
+#image3 img {
+    width: 100%;
+    max-width: 500px;
+    height: 80%;
+}
+
+#paragraph3 h2 {
+    font-size: 2.0rem;
+}
+
+#paragraph3 p {
+    font-size: 1rem;
+}
+
+
+/* Centering all containers */
+#container1, #container2, #container3 {
+    margin: auto; /* Centers the containers within the page */
+}
+
+
+/* 
+
+NOTES: 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+
+and a little guidance from chatgpt
+
+*/
