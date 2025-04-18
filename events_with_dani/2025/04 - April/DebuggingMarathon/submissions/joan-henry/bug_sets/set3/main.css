@@ -1,0 +1,22 @@
+.box {
+	width: 200px;
+	height: 200px;
+	background-color: #ddd;
+	margin: 20px auto;
+	position: relative;
+  }
+  
+  #secret-msg {
+	opacity: 0;
+	transition: 0.3s;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  .box:hover #secret-msg {
+	opacity: 1;
+  }
+  
