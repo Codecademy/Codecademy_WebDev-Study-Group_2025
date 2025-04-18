@@ -1,0 +1,16 @@
+h1 {
+	color: #222;
+	font-family: Arial;
+	text-align: center;
+}
+  
+#countBtn {
+	display: block;
+	margin: auto;
+	padding: 12px 24px;
+	background: green;
+	color: white;
+	border: 1px solid black;
+	cursor: pointer;
+}
+  
