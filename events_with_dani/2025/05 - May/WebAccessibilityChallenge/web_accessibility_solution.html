@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessible Sample Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .button {
+            background: #007acc;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome</h1>
+        <p>This is a sample website with improved accessibility.</p>
+        <img src="image.jpg" alt="Descriptive image of topic">
+
+        <section aria-labelledby="contact-form">
+            <h2 id="contact-form">Contact Us</h2>
+            <form>
+                <label for="name">Your name:</label>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="email">Your email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <button class="button" type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
