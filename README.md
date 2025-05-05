@@ -109,12 +109,6 @@ If you have feedback or suggestions, we'd love to hear from you! Please share yo
 
 ## Contact
 
-For questions or assistance, reach out to one of the study group managers:
-
-**Front-End**
+For questions or assistance, reach out to:
 
 - [**Dani T**](https://community.codecademy.com/u/8e235244)
-
-**Full-Stack**
-
-- [**Sean K**](https://community.codecademy.com/u/a6ff2e17)
