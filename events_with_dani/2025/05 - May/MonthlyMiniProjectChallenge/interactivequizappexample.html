@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .quiz-container { max-width: 600px; margin: auto; }
+        .question { font-size: 1.2em; margin-bottom: 10px; }
+        .option { margin: 5px 0; }
+        .result { font-size: 1.5em; margin-top: 20px; }
+        button { padding: 8px 15px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Interactive Quiz App</h2>
+        <div id="quiz">
+            <p class="question">Loading...</p>
+            <div id="options"></div>
+            <button onclick="nextQuestion()">Next</button>
+            <p class="result" id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            { text: "What is the capital of France?", options: ["Berlin", "Paris", "Madrid", "Rome"], answer: 1 },
+            { text: "What is 2 + 2?", options: ["3", "4", "5", "6"], answer: 1 },
+            { text: "What is the color of the sky?", options: ["Green", "Blue", "Red", "Yellow"], answer: 1 }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const question = questions[currentQuestion];
+            document.querySelector(".question").innerText = question.text;
+            const options = question.options.map((option, index) => `<div class='option'><input type='radio' name='answer' value='${index}'> ${option}</div>`).join('');
+            document.getElementById("options").innerHTML = options;
+        }
+
+        function nextQuestion() {
+            const selectedOption = document.querySelector("input[name='answer']:checked");
+            if (selectedOption && parseInt(selectedOption.value) === questions[currentQuestion].answer) {
+                score++;
+            }
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById("quiz").innerHTML = `<p class='result'>Your score: ${score}/${questions.length}</p>`;
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
