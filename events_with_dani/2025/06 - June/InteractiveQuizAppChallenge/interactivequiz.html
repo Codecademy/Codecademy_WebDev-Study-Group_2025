@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .quiz-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn.correct { background-color: #28a745; }
+    .btn.wrong { background-color: #dc3545; }
+    #next-btn {
+      margin-top: 1rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1 id="question">Question text</h1>
+    <div id="answer-buttons"></div>
+    <button id="next-btn" class="btn">Next</button>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "What does HTML stand for?",
+        answers: [
+          { text: "Hyper Text Markup Language", correct: true },
+          { text: "Hot Mail", correct: false },
+          { text: "Hyperlinks and Text Mark Language", correct: false }
+        ]
+      },
+      {
+        question: "What does CSS do?",
+        answers: [
+          { text: "Styles the content", correct: true },
+          { text: "Structures the content", correct: false },
+          { text: "Runs scripts", correct: false }
+        ]
+      },
+      {
+        question: "What language runs in the browser?",
+        answers: [
+          { text: "Python", correct: false },
+          { text: "Java", correct: false },
+          { text: "JavaScript", correct: true }
+        ]
+      }
+    ];
+
+    const questionEl = document.getElementById('question');
+    const answerButtons = document.getElementById('answer-buttons');
+    const nextBtn = document.getElementById('next-btn');
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function startQuiz() {
+      currentQuestionIndex = 0;
+      score = 0;
+      nextBtn.innerText = 'Next';
+      showQuestion();
+    }
+
+    function showQuestion() {
+      resetState();
+      let currentQuestion = questions[currentQuestionIndex];
+      questionEl.innerText = currentQuestion.question;
+
+      currentQuestion.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        if (answer.correct) {
+          button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
+        answerButtons.appendChild(button);
+      });
+    }
+
+    function resetState() {
+      nextBtn.style.display = 'none';
+      while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+      }
+    }
+
+    function selectAnswer(e) {
+      const selectedBtn = e.target;
+      const isCorrect = selectedBtn.dataset.correct === "true";
+      if (isCorrect) {
+        selectedBtn.classList.add('correct');
+        score++;
+      } else {
+        selectedBtn.classList.add('wrong');
+      }
+      Array.from(answerButtons.children).forEach(button => {
+        button.disabled = true;
+        if (button.dataset.correct === "true") {
+          button.classList.add('correct');
+        }
+      });
+      nextBtn.style.display = 'block';
+    }
+
+    function showScore() {
+      resetState();
+      questionEl.innerText = `You scored ${score} out of ${questions.length}!`;
+      nextBtn.innerText = 'Play Again';
+      nextBtn.style.display = 'block';
+    }
+
+    function handleNextButton() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        showQuestion();
+      } else {
+        showScore();
+      }
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+      } else {
+        startQuiz();
+      }
+    });
+
+    startQuiz();
+  </script>
+</body>
+</html>
