@@ -1,0 +1,59 @@
+<!-- starter-form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sample Contact Form (Needs Accessibility Fixes)</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+    input:focus, textarea:focus, button:focus {
+      outline: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Us</h1>
+
+  <form id="contact-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedy="email-error" aria-invalid="false">
+    </div>
+
+    <p id="email-error" class="error" hidden>Please enter a valid email address.</p>
+
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
+    
+    <fieldset>
+      <legend>Newsletter Options</legend>
+      <label>
+        <input type="checkbox" name="subscribe"> Subscribe to newsletter
+      </label>
+    </fieldset>
+
+    <button type="submit">Send</button>
+  </form>
+
+</body>
+</html>
