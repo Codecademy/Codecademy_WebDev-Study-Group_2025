@@ -21,6 +21,17 @@
     input:focus, textarea:focus, button:focus {
       outline: 2px solid blue;
     }
+    sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
   </style>
 </head>
 <body>
@@ -46,7 +57,7 @@
     </div>
     
     <fieldset>
-      <legend>Newsletter Options</legend>
+      <legend class="sr-only">Newsletter Options</legend>
       <label>
         <input type="checkbox" name="subscribe"> Subscribe to newsletter
       </label>
