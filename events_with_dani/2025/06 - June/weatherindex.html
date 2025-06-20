@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Widget</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f0f8ff;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 0.5rem;
+      width: 70%;
+      margin-right: 5px;
+    }
+
+    button {
+      padding: 0.5rem;
+    }
+
+    #weather-display {
+      margin-top: 1.5rem;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Forecast</h1>
+    <form id="weather-form">
+      <input type="text" id="city-input" placeholder="Enter a city" required />
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weather-display" class="hidden">
+      <h2 id="city"></h2>
+      <p id="temp"></p>
+      <p id="desc"></p>
+    </div>
+    <p id="error-message" class="error hidden"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('weather-form');
+    const cityInput = document.getElementById('city-input');
+    const cityName = document.getElementById('city');
+    const temp = document.getElementById('temp');
+    const desc = document.getElementById('desc');
+    const display = document.getElementById('weather-display');
+    const error = document.getElementById('error-message');
+
+    // Replace with your actual API key from OpenWeatherMap
+    const API_KEY = 'YOUR_API_KEY_HERE';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const city = cityInput.value.trim();
+
+      if (!city) return;
+
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('City not found');
+        }
+        const data = await response.json();
+        cityName.textContent = data.name;
+        temp.textContent = `Temperature: ${data.main.temp}°C`;
+        desc.textContent = `Condition: ${data.weather[0].description}`;
+        display.classList.remove('hidden');
+        error.classList.add('hidden');
+      } catch (err) {
+        display.classList.add('hidden');
+        error.textContent = err.message;
+        error.classList.remove('hidden');
+      }
+
+      form.reset();
+    });
+  </script>
+</body>
+</html>
