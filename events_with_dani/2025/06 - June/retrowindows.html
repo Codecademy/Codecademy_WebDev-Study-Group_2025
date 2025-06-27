@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Computer</title>
+  <style>
+    body {
+      background: teal;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .window {
+      background: silver;
+      border: 3px solid gray;
+      width: 400px;
+      box-shadow: inset -2px -2px white, inset 2px 2px black;
+    }
+    .title-bar {
+      background: navy;
+      color: white;
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+    .content {
+      padding: 1rem;
+      font-size: 14px;
+    }
+    button {
+      background: lightgray;
+      border: 2px outset white;
+      padding: 0.25rem 0.5rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="window">
+    <div class="title-bar">My Computer</div>
+    <div class="content">
+      <p>C:\> Directory Listing...</p>
+      <button>OK</button>
+    </div>
+  </div>
+</body>
+</html>
