@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixel Arcade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: 'Press Start 2P', monospace;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      text-shadow: 2px 2px magenta;
+    }
+    .btn {
+      background-color: red;
+      color: yellow;
+      border: 3px solid yellow;
+      padding: 1rem 2rem;
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🕹️ Welcome to Pixel Arcade</h1>
+  <p>Insert coin to start</p>
+  <a href="#" class="btn">▶ START</a>
+</body>
+</html>
