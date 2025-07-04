@@ -1,0 +1,35 @@
+body {
+background:#eee;
+font-family:sans-serif;
+margin:0;
+padding:0;
+}
+#box {
+width:300px;
+padding:20px;
+border:1px solid #999;
+margin:30px;
+background:#fff;
+}
+.msg {
+color:#333;
+font-size:13px;
+margin-bottom:5px;
+margin-top:5px;
+margin-left:0px;
+margin-right:0px;
+}
+input {
+padding:5px;
+margin-bottom:5px;
+}
+select {
+margin-bottom:5px;
+padding:5px;
+}
+button {
+background:blue;
+color:white;
+border:none;
+padding:10px;
+}
